@@ -9,19 +9,19 @@ current() {
 
 create() {
     echo "--Creating: $(get_name $1)"
-    virsh net-update $network add portgroup $1
+    virsh net-update $network add portgroup $1 --live --config
     echo
 }
 
 update() {
     echo "--Updating: $(get_name $1)"
-    virsh net-update $network modify portgroup $1
+    virsh net-update $network modify portgroup $1 --live --config
     echo
 }
 
 remove() {
     echo "--Removing: $(get_name $1)"
-    virsh net-update $network delete portgroup $1
+    virsh net-update $network delete portgroup $1 --live --config
     echo
 }
 
