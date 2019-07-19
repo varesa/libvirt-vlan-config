@@ -41,6 +41,7 @@ for portgroup_xml in remove/*.xml; do
     if current | grep -q "$(get_name $portgroup_xml)"; then
         remove $portgroup_xml
     else
-        echo "$portgroup_xml does not exist"
+        echo "--VLAN $portgroup_xml does not exist"
+        echo
     fi
 done
