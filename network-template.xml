@@ -1,0 +1,7 @@
+<network>
+  <name>ovs-br-virt</name>
+  <forward mode='bridge'/>
+  <bridge name='br-name'/>
+  <virtualport type='openvswitch'/>
+</network>
+
