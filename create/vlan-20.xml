@@ -1,5 +1,0 @@
-<portgroup name='vlan-20-vpn'>
-  <vlan>
-    <tag id='20'/>
-  </vlan>
-</portgroup>

@@ -1,5 +1,0 @@
-<portgroup name='vlan-234'>
-  <vlan>
-    <tag id='234'/>
-  </vlan>
-</portgroup>

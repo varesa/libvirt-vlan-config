@@ -1,5 +1,0 @@
-<portgroup name='vlan-trunk'>
-  <vlan trunk='yes'>
-    <tag id='1'/>
-  </vlan>
-</portgroup>
