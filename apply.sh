@@ -44,11 +44,16 @@ for portgroup_xml in $path/create/*.xml; do
     fi
 done
 
-for portgroup_xml in $path/remove/*.xml; do
-    if current | grep -q "$(get_name $portgroup_xml)"; then
-        remove $portgroup_xml
-    else
-        echo "--VLAN $portgroup_xml does not exist"
-        echo
-    fi
-done
+if [ ! "$(ls $path/remove | wc -l)" == 0 ]; then
+
+    for portgroup_xml in $path/remove/*.xml; do
+        if current | grep -q "$(get_name $portgroup_xml)"; then
+            remove $portgroup_xml
+        else
+            echo "--VLAN $portgroup_xml does not exist"
+            echo
+        fi
+    done
+else
+    echo "No VLANs to remove"
+fi
